@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        <h2>Welcome, {{ user.username }}!</h2>
+        <p>Email: {{ user.email }}</p>
+        <a href="{{ url_for('edit_profile') }}"  class="link-btn link-btn-primary">Edit Profile</a>
+        <a href="{{ url_for('all_profiles') }}"  class="link-btn link-btn-primary">View All Profiles</a>
+    </div>
+</body>
+</html>
